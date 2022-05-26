@@ -1,0 +1,18 @@
+@mixin fancy-scrollbar($size: $std-border-width) {
+  &::-webkit-scrollbar {
+    width: $size;
+    height: $size;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-secondary;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply bg-primary;
+  }
+}
+
+.fancy-scrollbar {
+  @include fancy-scrollbar;
+}

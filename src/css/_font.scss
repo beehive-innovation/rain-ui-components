@@ -1,0 +1,28 @@
+$fw-regular: 400;
+$fw-bold: 700;
+
+@mixin std-font-props {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  line-height: 1.15rem !important;
+  color: white;
+}
+
+h1 {
+  line-height: 1.75rem !important;
+}
+
+h2 {
+  line-height: 1.5rem !important;
+}
+
+h3 {
+  line-height: 1.25rem !important;
+}
+
+.text-error {
+  color: var(--red) !important;
+  font-size: 0.85rem;
+}

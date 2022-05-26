@@ -1,0 +1,83 @@
+@import "variables";
+@import "animations";
+@import "buttons";
+@import "font";
+@import "inputs";
+@import "media";
+@import "scroll";
+@import "table";
+
+:root {
+  --green: #569d3e;
+  --red: #cb4b41;
+  --red-darker: #72231d;
+  --yellow: #f6ca56;
+  --primary: #0f0c21;
+  --secondary: #667080;
+}
+
+* {
+  @extend .fancy-scrollbar;
+}
+
+html,
+body {
+  @include std-font-props;
+  font-family: "Inter", sans-serif !important;
+  font-size: 16px;
+  font-weight: $fw-regular;
+}
+
+.spacer {
+  @apply flex-grow;
+}
+
+.divider {
+  $size: 1px;
+  height: $size;
+  min-height: $size;
+  width: 100%;
+  @apply bg-secondary;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: none;
+
+  width: 1rem;
+  height: 1rem;
+
+  border: 0.125rem solid var(--green);
+  border-radius: 50%;
+  margin-right: 0.25rem;
+
+  &:checked {
+    background-color: var(--green);
+  }
+}
+
+.loader {
+  @apply border-2 border-solid rounded-full border-gray-700
+           border-t-2 border-t-white
+           w-1.5rem h-1.5rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.modal-view {
+  @apply backdrop-blur-sm bg-black/75 fixed left-0 top-0 flex flex-col items-center justify-center;
+}
+
+.modal {
+  @extend .modal-view;
+  @apply w-screen h-screen;
+}

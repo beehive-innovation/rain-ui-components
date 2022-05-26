@@ -1,0 +1,19 @@
+@mixin formElementStyle {
+  color: gray !important;
+  padding: $std-padding !important;
+  @apply rounded-md border-2 border-gray-200 w-full;
+}
+
+input,
+select,
+textarea {
+  @include formElementStyle;
+
+  &:disabled {
+    @apply bg-gray-200;
+  }
+}
+
+input[type="radio"] {
+  max-width: 1rem;
+}

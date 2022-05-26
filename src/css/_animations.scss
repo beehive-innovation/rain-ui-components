@@ -1,0 +1,28 @@
+.std-transition-duration {
+  transition: $std-duration ease-out !important;
+}
+
+.pressable {
+  @extend .std-transition-duration;
+
+  &:active {
+    transform: scale($std-shrink-factor) !important;
+  }
+}
+
+.std-hover {
+  @media (hover) {
+    &:hover {
+      transition: $std-duration ease-out;
+      outline: 0;
+      cursor: pointer;
+    }
+  }
+
+  &--scale {
+    &:hover {
+      @extend .std-transition-duration;
+      transform: scale($std-scale-factor);
+    }
+  }
+}

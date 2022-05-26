@@ -1,0 +1,32 @@
+.std-img {
+  width: auto;
+  $height: 10rem;
+  height: $height;
+  min-height: $height;
+  max-height: $height;
+  @apply rounded-md;
+}
+
+.media-default {
+  //   width: auto;
+  //   height: 12.5rem;
+  width: 100%;
+  height: auto;
+
+  &--placeholder {
+    @extend .media-default;
+    @apply flex flex-row items-center justify-center border-2 border-gray-300 bg-gray-200;
+  }
+}
+
+.thumbnail {
+  $thumbnail-size: 3rem;
+
+  width: $thumbnail-size !important;
+  min-width: $thumbnail-size;
+  max-width: $thumbnail-size !important;
+
+  height: $thumbnail-size !important;
+  min-height: $thumbnail-size !important;
+  max-height: $thumbnail-size !important;
+}
