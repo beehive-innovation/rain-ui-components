@@ -81,3 +81,10 @@ input[type="radio"] {
   @extend .modal-view;
   @apply w-screen h-screen;
 }
+
+.test1css {
+  line-height: 2rem !important;
+  font-size: 5rem !important;
+  color: violet !important;
+  background-color: #569d3e !important;
+}
