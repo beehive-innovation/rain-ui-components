@@ -26,3 +26,24 @@
     }
   }
 }
+
+svg {
+  // To have a cursor-pointer on icons
+  @extend .std-hover;
+}
+
+.loader {
+  @apply border-2 border-solid rounded-full border-gray-700
+           border-t-2 border-t-white
+           w-1.5rem h-1.5rem;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

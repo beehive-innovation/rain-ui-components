@@ -23,12 +23,27 @@
   }
 }
 
-// .btn-secondary {
-//   @extend .pressable;
-//   @extend .std-hover;
-//   @extend .std-hover--scale;
-//   @extend .basic-btn-styles;
+.btn-secondary {
+  @extend .pressable;
+  @extend .std-hover;
+  @extend .std-hover--scale;
+  @extend .basic-btn-styles;
 
-//   color: var(--red);
-//   background-color: white;
-// }
+  color: var(--red);
+  background-color: white;
+}
+
+.btn-success {
+  @extend .pressable;
+  @extend .std-hover;
+  @extend .std-hover--scale;
+  @extend .basic-btn-styles;
+
+  color: white;
+  background-color: var(--green);
+}
+
+.btn-saving {
+  @extend .basic-btn-styles;
+  @apply border-2 border-gray-300 bg-gray-200 text-gray-500;
+}
