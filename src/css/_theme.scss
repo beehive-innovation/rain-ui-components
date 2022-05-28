@@ -1,18 +1,18 @@
-.theme {
+html {
   --green: #569d3e;
   --red: #cb4b41;
   --red-darker: #72231d;
   --yellow: #f6ca56;
 
-  &--light {
-    @extend .theme;
-    --primary: #e5e7eb;
-    --secondary: #ffffff;
-  }
+  @apply bg-primary;
+}
 
-  &--dark {
-    @extend .theme;
-    --primary: #0f0c21;
-    --secondary: #667080;
-  }
+html[data-theme="light"] {
+  --primary: #e5e7eb;
+  --secondary: #ffffff;
+}
+
+html[data-theme="dark"] {
+  --primary: #0f0c21;
+  --secondary: #667080;
 }

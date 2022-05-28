@@ -1,8 +1,18 @@
 <script lang="ts">
   import "@/css/app.scss"
+
+  function toggleTheme() {
+    const theme = document.documentElement.getAttribute("data-theme")
+    document.documentElement.setAttribute("data-theme", theme == "dark" ? "light" : "dark")
+  }
 </script>
 
 <h1>Welcome to Rain UI Components.</h1>
+
+<section>
+  <h2>Themes</h2>
+  <button class="btn-secondary" on:click={toggleTheme}>Toggle theme</button>
+</section>
 
 <section>
   <h2>Buttons</h2>
