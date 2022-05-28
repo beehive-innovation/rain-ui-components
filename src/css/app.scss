@@ -1,4 +1,6 @@
 @import "variables";
+@import "theme";
+
 @import "animations";
 @import "buttons";
 @import "font";
@@ -6,15 +8,6 @@
 @import "media";
 @import "scroll";
 @import "table";
-
-:root {
-  --green: #569d3e;
-  --red: #cb4b41;
-  --red-darker: #72231d;
-  --yellow: #f6ca56;
-  --primary: #0f0c21;
-  --secondary: #667080;
-}
 
 * {
   @extend .fancy-scrollbar;
@@ -80,11 +73,4 @@ input[type="radio"] {
 .modal {
   @extend .modal-view;
   @apply w-screen h-screen;
-}
-
-.test1css {
-  line-height: 2rem !important;
-  font-size: 5rem !important;
-  color: violet !important;
-  background-color: #569d3e !important;
 }
