@@ -1,6 +1,6 @@
 # Rain UI Components
 
-Reusable UI components for all Rain Frontend projects.
+Reusable UI components for all Rain Frontend projects. Start the application to look up all styles and examples, that will cover most of your questions.
 
 ## How to use it
 
@@ -35,6 +35,14 @@ import "rain-ui-components/src/css/app.scss"
 import { Icon, formatAddress } from "rain-ui-components"
 ...
 </script>
+```
+
+5. Choose a theme of light or dark. We recommend including it in the root (html-tag) and also applying a global background. Any styles can be found in the `/css` folder.
+
+```html
+<html lang="en" class="theme--dark bg-primary">
+  ...
+</html>
 ```
 
 ## Tech Stack
