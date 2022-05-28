@@ -47,9 +47,9 @@
   }}
 >
   {#if hasVideo}
-    <Video src={video} classes="media-default" />
+    <Video src={video} class="media-default" />
   {:else if hasSrc}
-    <Video {src} classes="media-default" />
+    <Video {src} class="media-default" />
   {:else}
     <Video />
   {/if}

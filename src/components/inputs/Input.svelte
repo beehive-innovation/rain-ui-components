@@ -4,7 +4,6 @@
 
   export let value = ""
   export let id = ""
-  export let classes = ""
   export let placeholder = ""
   export let type = "text"
   export let tabindex = 0
@@ -48,7 +47,7 @@
   }
 </script>
 
-<div class={`${classes} w-full flex flex-col flex-nowrap justify-center`}>
+<div class={`${$$props.class} w-full flex flex-col flex-nowrap justify-center`}>
   <input
     bind:value
     on:blur={validate}
@@ -56,12 +55,7 @@
     on:keypress={onEnter_}
     disabled={disabled || validating}
     use:typeAction
-    {id}
-    {min}
-    {max}
-    {tabindex}
-    {required}
-    {placeholder}
+    {...$$props}
     class="w-full"
   />
   {#each errors as errorMsg}

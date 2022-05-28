@@ -1,5 +1,6 @@
 <script lang="ts">
   import "@/css/app.scss"
+  import Input from "@/components/inputs/Input.svelte"
 
   function toggleTheme() {
     const theme = document.documentElement.getAttribute("data-theme")
@@ -18,6 +19,12 @@
   <h2>Buttons</h2>
   <p>To use a buttons with these styles, apply the following classes:</p>
   <button class="btn-primary">btn-primary</button>
+</section>
+
+<section>
+  <h2>Inputs</h2>
+  <p>To use an input with these styles, apply the following classes:</p>
+  <Input placeholder="Some test" />
 </section>
 
 <style>

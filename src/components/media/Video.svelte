@@ -2,7 +2,6 @@
   import { createEventDispatcher } from "svelte"
   import Icon from "@/components/icons/Icon.svelte"
   export let src: string = "undefined"
-  export let classes: string = ""
   export let pressable: boolean = true // Animation purpose only
 
   const dispatch = createEventDispatcher()
@@ -10,7 +9,7 @@
 </script>
 
 {#if errorLoadingVideo}
-  <div class={`media-default--placeholder std-video ${classes} ${pressable && "pressable"}`}>
+  <div class={`media-default--placeholder std-video ${$$props.class} ${pressable && "pressable"}`}>
     <Icon name="video" width={30} />
   </div>
 {:else}

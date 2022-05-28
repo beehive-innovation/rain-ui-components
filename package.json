@@ -4,14 +4,17 @@
   "version": "0.0.1",
   "description": "Reusable UI components for all Rain Frontend projects.",
   "type": "module",
-  "main": "src/index.js",
-  "typings": "src/index.js",
+  "main": "./dist/rain-ui-components.umd.js",
+  "module": "./dist/rain-ui-components.es.js",
   "files": [
-    "src/**/*.js",
-    "src/**/*.ts",
-    "src/**/*.svelte",
-    "src/css/*.scss"
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/rain-ui-components.es.js",
+      "require": "./dist/rain-ui-components.umd.js"
+    }
+  },
   "keywords": [
     "components",
     "component",

@@ -48,9 +48,9 @@
   }}
 >
   {#if hasImage}
-    <Image src={img} {alt} classes="media-default" />
+    <Image src={img} {alt} class="media-default" />
   {:else if hasSrc}
-    <Image {src} {alt} classes="media-default" />
+    <Image {src} {alt} class="media-default" />
   {:else}
     <Image />
   {/if}
