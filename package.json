@@ -1,14 +1,20 @@
 {
   "name": "rain-ui-components",
-  "private": true,
-  "version": "0.0.1",
   "description": "Reusable UI components for all Rain Frontend projects.",
+  "version": "0.0.3",
+  "license": "CAL",
   "type": "module",
   "main": "./dist/rain-ui-components.umd.js",
   "module": "./dist/rain-ui-components.es.js",
+  "svelte": "./src/components/index.js",
   "files": [
+    "src",
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/beehive-innovation/rain-ui-components.git"
+  },
   "exports": {
     ".": {
       "import": "./dist/rain-ui-components.es.js",

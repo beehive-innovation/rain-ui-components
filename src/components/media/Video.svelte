@@ -17,7 +17,7 @@
     autoplay
     loop
     muted
-    class={`rounded-md ${classes} ${pressable && "pressable"}`}
+    class={`rounded-md ${$$props.class} ${pressable && "pressable"}`}
     {src}
     on:click={(evt) => dispatch("click", evt)}
     on:error={() => (errorLoadingVideo = true)}

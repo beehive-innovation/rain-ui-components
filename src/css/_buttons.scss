@@ -5,11 +5,15 @@
   padding: $std-padding !important;
 }
 
-.btn-primary {
+.btn {
   @extend .pressable;
   @extend .std-hover;
   @extend .std-hover--scale;
   @extend .basic-btn-styles;
+}
+
+.btn-primary {
+  @extend .btn;
 
   color: white;
   background-color: var(--red);
@@ -24,20 +28,14 @@
 }
 
 .btn-secondary {
-  @extend .pressable;
-  @extend .std-hover;
-  @extend .std-hover--scale;
-  @extend .basic-btn-styles;
+  @extend .btn;
 
   color: var(--red);
   background-color: white;
 }
 
 .btn-success {
-  @extend .pressable;
-  @extend .std-hover;
-  @extend .std-hover--scale;
-  @extend .basic-btn-styles;
+  @extend .btn;
 
   color: white;
   background-color: var(--green);

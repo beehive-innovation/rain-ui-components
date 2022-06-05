@@ -1,1 +1,1 @@
-export { default as Notification } from "./Notification.svelte"
+export { default as InfoNotification } from "./InfoNotification.svelte"

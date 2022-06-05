@@ -9,10 +9,14 @@ html {
 
 html[data-theme="light"] {
   --primary: #e5e7eb;
-  --secondary: #ffffff;
+  --primary-content: #0f0c21;
+  --secondary: #e5e7eb;
+  --secondary-content: #0f0c21;
 }
 
 html[data-theme="dark"] {
   --primary: #0f0c21;
+  --primary-content: #667080;
   --secondary: #667080;
+  --secondary-content: #0f0c21;
 }

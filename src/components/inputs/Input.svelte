@@ -3,14 +3,7 @@
   import { isEnter } from "@/lib/util"
 
   export let value = ""
-  export let id = ""
-  export let placeholder = ""
-  export let type = "text"
-  export let tabindex = 0
   export let disabled = false
-  export let required = false
-  export let min = ""
-  export let max = ""
   export let onChange = () => {}
   export let onEnter = () => {}
   export let validator = async (): ValidationResult => []
