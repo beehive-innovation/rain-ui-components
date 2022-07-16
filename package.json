@@ -1,55 +1,40 @@
 {
   "name": "rain-ui-components",
-  "description": "Reusable UI components for all Rain Frontend projects.",
-  "version": "0.0.3",
-  "license": "CAL",
-  "type": "module",
-  "main": "./dist/rain-ui-components.umd.js",
-  "module": "./dist/rain-ui-components.es.js",
-  "svelte": "./src/components/index.js",
-  "files": [
-    "src",
-    "dist"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/beehive-innovation/rain-ui-components.git"
-  },
-  "exports": {
-    ".": {
-      "import": "./dist/rain-ui-components.es.js",
-      "require": "./dist/rain-ui-components.umd.js"
-    }
-  },
-  "keywords": [
-    "components",
-    "component",
-    "framework",
-    "ui-library",
-    "ui"
-  ],
+  "author": "Kevin M. Schott",
+  "version": "0.0.1",
+  "svelte": "index.js",
   "scripts": {
-    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "dev": "vite dev",
     "build": "vite build",
-    "deploy": "yarn cache clean && yarn install --network-concurrency 1 && yarn build",
-    "dev": "vite",
-    "preview": "vite preview"
+    "package": "svelte-kit package",
+    "preview": "vite preview",
+    "prepare": "svelte-kit sync",
+    "test": "playwright test",
+    "check": "svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --check --plugin-search-dir=. .",
+    "format": "prettier --write --plugin-search-dir=. ."
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
-    "@tsconfig/svelte": "^2.0.1",
-    "autoprefixer": "^10.4.4",
-    "postcss": "^8.4.12",
-    "sass": "^1.50.0",
+    "@playwright/test": "^1.22.2",
+    "@sveltejs/adapter-auto": "next",
+    "@sveltejs/kit": "next",
+    "autoprefixer": "^10.4.7",
+    "postcss": "^8.4.14",
+    "prettier": "^2.6.2",
+    "prettier-plugin-svelte": "^2.7.0",
+    "sass": "^1.53.0",
     "svelte": "^3.44.0",
-    "svelte-check": "^2.2.7",
-    "svelte-preprocess": "^4.9.8",
-    "svelte-windicss-preprocess": "^4.2.6",
+    "svelte-check": "^2.7.1",
+    "svelte-preprocess": "^4.10.6",
+    "svelte-windicss-preprocess": "^4.2.8",
+    "svelte2tsx": "^0.5.11",
     "tslib": "^2.3.1",
-    "typescript": "^4.5.4",
-    "vite": "^2.9.9",
-    "vite-plugin-windicss": "^1.8.4",
-    "windicss": "^3.5.1"
+    "typescript": "^4.7.4",
+    "vite": "3.0.0",
+    "vite-plugin-windicss": "^1.8.6",
+    "windicss": "^3.5.6"
   },
+  "type": "module",
   "dependencies": {}
 }
