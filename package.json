@@ -3,10 +3,14 @@
   "author": "Kevin M. Schott",
   "version": "0.0.1",
   "svelte": "index.js",
+  "files": [
+    "assets/*"
+  ],
   "scripts": {
-    "dev": "vite dev",
     "build": "vite build",
-    "package": "svelte-kit package",
+    "copyCSS": "mkdir -p ./package/assets && cp .svelte-kit/output/client/_app/immutable/assets/* ./package/assets && mv ./package/assets/*.css ./package/assets/index.css",
+    "dev": "vite dev",
+    "package": "yarn build && svelte-kit package && yarn copyCSS",
     "preview": "vite preview",
     "prepare": "svelte-kit sync",
     "test": "playwright test",

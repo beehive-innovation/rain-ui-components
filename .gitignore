@@ -24,3 +24,5 @@ dist-ssr
 *.sw?
 
 Playground.svelte
+.svelte
+.svelte-kit
